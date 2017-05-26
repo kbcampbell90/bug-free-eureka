@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Beisbol | Welcome!</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="getPlayersCtrl.js"></script>
+</head>
+
+<body ng-app="mainApp">
+	<div ng-controller="people">
+		<ul style="list-style-type: none">
+			<h2> Names </h2>
+			<li ng-repeat="person in persons">
+				{{ person.Name }}
+			</li>
+		</ul>
+	</div>
+
+	<div ng-controller="standCtrl">
+		<ul style="list-style-type: none">
+			<h2> Standings </h2>
+			<li ng-repeat="standing in standings">
+				{{ standing.team_id }}
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
